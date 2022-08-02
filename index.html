@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap-css\bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap-js\bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/aa64bf530b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todo.css">
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <div class="container" id="head">
+        <div class="container" id="btndiv">
+            <button class="btn btn-lg btn-outline-primary" onclick="dis1()">Pending Task</button>
+            <button class="btn btn-lg btn-outline-primary" onclick="dis()">Completed Task</button> 
+        </div>
+    </div>
+    
+    <div class="container" id="body">
+        <div class="container" id="pending">
+            <h3>Pending Task:</h3>
+            <div id="pending_task">
+
+            </div>
+        </div>
+        
+        <div class="container" id="completed">
+            <h3>Completed Task:</h3>
+            <div id="Complete_task">
+
+            </div>
+        </div> 
+        <button class="btn btn-lg btn-primary" onclick="add()" style="margin-left: 580px;margin-top:20px">ADD<i class="fa-solid fa-plus"></i></button>
+    </div>
+    
+    <div id="form">
+        <div id="form-head">
+            <pre><h1>ADD A TASK    <i class="fa-solid fa-xmark" id="del"></i></pre></h1>
+            </div>
+        <form id="form-body">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input type="text" placeholder="Enter Name" id="taskname" style="width: 100%; padding: 5px;"></td>
+                </tr>
+                <tr>
+                    <td>Date: </td>
+                    <td><input type="date" id="taskdate" style="width: 100%; padding: 5px;"></td>
+                </tr>
+                <tr>
+                    <td>Task-type: </td>
+                    <td><select id="task-type" style="width: 100%; padding: 5px;" >
+                            <option>Home</option>
+                            <option>Office</option>
+                            <option>Outer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description: </td>
+                    <td><textarea rows="5" cols="30" id="taskdesc" style="width: 100%;"></textarea></td>
+                </tr>
+                    <td colspan="2" style="text-align: center;"><button class="sub" type="button" onclick="getInput()">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+       
+    </div>
+    
+    <script src="todo.js"></script>
+</body>
+</html>
